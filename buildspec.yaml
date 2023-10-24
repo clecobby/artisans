@@ -11,7 +11,7 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...
       - docker build -t public.ecr.aws/c4y1y7o3/apprent:latest .
-      - docker tag public.ecr.aws/c4y1y7o3/apprent:latest $REPOSITORY_URI:$IMAGE_TAG
+      - docker tag public.ecr.aws/c4y1y7o3/apprent:latest public.ecr.aws/c4y1y7o3/apprent:latest
   build:
     commands:
       - echo Pushing the Docker image to ECR...
