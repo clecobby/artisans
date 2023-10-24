@@ -7,7 +7,7 @@ api = Api(app)
 class Hello(Resource):
     def get(self): 
   
-        return jsonify({'message': 'hello world'}) 
+        return jsonify({'message': 'helloo world'}) 
   
     # Corresponds to POST request 
     def post(self): 
