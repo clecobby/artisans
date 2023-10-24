@@ -1,6 +1,14 @@
 version: 0.2
 
 phases:
+  install:
+   commands:
+     - echo "install step"
+     - apt-get update
+     - apt-get install zip -y
+     - apt-get install python3-pip -y
+     - pip install --upgrade pip
+     - pip install --upgrade awscli
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
