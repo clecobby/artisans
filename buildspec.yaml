@@ -4,7 +4,7 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
-      - apt-get -y install awscli 
+      - pip3 install awscli --upgrade --user
       - aws --version
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
       - REPOSITORY_URI=public.ecr.aws/c4y1y7o3/apprent
